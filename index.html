@@ -1,1 +1,1270 @@
-.
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>English Language GCSE (AQA) - CENTURY nugget targets</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #64748b;
+      --line: #d7deea;
+      --head: #eaf1ff;
+      --accent: #1d4ed8;
+      --accent-dark: #173d9a;
+      --accent-soft: #eff6ff;
+      --success: #166534;
+      --warning: #7c2d12;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+    .header {
+      padding: 28px 28px 18px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.2;
+      color: #0f172a;
+    }
+    .lead {
+      margin: 0 0 16px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 980px;
+    }
+    .notice {
+      margin: 0;
+      padding: 16px 18px;
+      border: 1px solid #c9dcff;
+      border-radius: 14px;
+      background: var(--accent-soft);
+      font-size: 14px;
+      line-height: 1.65;
+      color: #17315f;
+    }
+    .table-wrap {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      min-width: 980px;
+    }
+    thead th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      text-align: left;
+      background: var(--head);
+      color: #0f172a;
+      padding: 14px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      border-bottom: 1px solid var(--line);
+      text-transform: lowercase;
+    }
+    tbody td {
+      padding: 14px 16px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+      line-height: 1.55;
+      background: #ffffff;
+      transition: background 0.2s ease;
+    }
+    tbody tr:nth-child(even) td {
+      background: #fbfcff;
+    }
+    tbody tr:hover td {
+      background: #f8fbff;
+    }
+    tbody tr.has-selection td {
+      background: #eef6ff !important;
+    }
+    td.skill-area {
+      width: 190px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    td.topic {
+      width: 260px;
+      font-weight: 600;
+    }
+    td.nuggets {
+      width: auto;
+    }
+    .nugget-list {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      columns: 2;
+      column-gap: 30px;
+    }
+    .nugget-list li {
+      margin: 0 0 8px;
+      break-inside: avoid;
+    }
+    .nugget-list li:last-child {
+      margin-bottom: 0;
+    }
+    .nugget-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .nugget-checkbox {
+      width: 18px;
+      height: 18px;
+      margin: 3px 0 0;
+      flex: 0 0 auto;
+      accent-color: var(--accent);
+    }
+    .nugget-text {
+      display: inline-block;
+    }
+    .code {
+      color: var(--accent);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .action-panel {
+      padding: 22px 28px 24px;
+      border-top: 1px solid var(--line);
+      background: #ffffff;
+    }
+    .selected-count {
+      margin: 0 0 14px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-dark);
+    }
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    button {
+      border: none;
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.04s ease, opacity 0.2s ease, background 0.2s ease;
+    }
+    button:active {
+      transform: translateY(1px);
+    }
+    .primary-btn {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .primary-btn:hover {
+      background: #1b46c2;
+    }
+    .secondary-btn {
+      background: #e5eefc;
+      color: #17315f;
+    }
+    .secondary-btn:hover {
+      background: #d8e6ff;
+    }
+    .output-card {
+      padding: 26px 28px 28px;
+      border-top: 1px solid var(--line);
+      background: #fcfdff;
+    }
+    .output-card h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.25;
+      color: #0f172a;
+    }
+    .output-help {
+      margin: 0 0 16px;
+      font-size: 14px;
+      line-height: 1.65;
+      color: #334155;
+    }
+    textarea {
+      width: 100%;
+      min-height: 320px;
+      padding: 16px 18px;
+      border: 1px solid #cdd8ea;
+      border-radius: 14px;
+      resize: vertical;
+      font-size: 15px;
+      line-height: 1.65;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+    }
+    textarea:focus {
+      outline: 2px solid #bfdbfe;
+      border-color: #93c5fd;
+    }
+    .status {
+      min-height: 24px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .status.success {
+      color: var(--success);
+    }
+    .status.warning {
+      color: var(--warning);
+    }
+    .footer {
+      padding: 14px 28px 24px;
+      font-size: 13px;
+      color: var(--muted);
+      background: #ffffff;
+    }
+    @media (max-width: 920px) {
+      .nugget-list { columns: 1; }
+    }
+    @media (max-width: 760px) {
+      .wrap { padding: 18px 10px 28px; }
+      .header, .action-panel, .output-card, .footer { padding-left: 18px; padding-right: 18px; }
+      h1 { font-size: 24px; }
+      .output-card h2 { font-size: 21px; }
+      tbody td, thead th { padding: 12px 12px; }
+      .button-row { flex-direction: column; align-items: stretch; }
+      button { width: 100%; }
+      textarea { min-height: 360px; }
+    }
+    @media print {
+      body { background: #ffffff; }
+      .wrap { max-width: none; padding: 0; }
+      .card {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      thead th {
+        position: static;
+      }
+      tbody tr:nth-child(even) td,
+      tbody tr:hover td,
+      tbody tr.has-selection td {
+        background: #ffffff !important;
+      }
+      .action-panel button,
+      .output-card button,
+      .status {
+        display: none;
+      }
+      @page {
+        size: A4 landscape;
+        margin: 12mm;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <h1>English Language GCSE (AQA) - CENTURY nugget targets</h1>
+        <p class="lead">Tick each CENTURY nugget that you need to work on. When you have finished, scroll to the bottom of the page and click <strong>Generate targets</strong>. Your personalised English targets will appear in the text box below.</p>
+        <p class="notice"><strong>What to do next:</strong> after you generate your targets, click <strong>Copy to clipboard</strong>, log into Teams, and send the message to your English tutor. These targets should then be completed <strong>as soon as possible</strong> as homework so that you can improve your grade.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table aria-label="English Language GCSE AQA CENTURY nugget targets">
+          <thead>
+            <tr>
+              <th>skill area</th>
+              <th>topic / focus</th>
+              <th>century nugget(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+<tr>
+  <td class="skill-area">Reading</td>
+  <td class="topic">Reading skills</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_1">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_1" data-topic="Reading skills" data-nugget="Implicit and Explicit [EN1.01]">
+          <span class="nugget-text">Implicit and Explicit <span class="code">[EN1.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_2">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_2" data-topic="Reading skills" data-nugget="Selecting Evidence [EN1.02]">
+          <span class="nugget-text">Selecting Evidence <span class="code">[EN1.02]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_3">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_3" data-topic="Reading skills" data-nugget="Skimming and Scanning [EN1.03]">
+          <span class="nugget-text">Skimming and Scanning <span class="code">[EN1.03]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_4">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_4" data-topic="Reading skills" data-nugget="Synthesising Evidence - differences [EN1.04]">
+          <span class="nugget-text">Synthesising Evidence - differences <span class="code">[EN1.04]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_5">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_5" data-topic="Reading skills" data-nugget="Synthesising Evidence - Similarities [EN1.05]">
+          <span class="nugget-text">Synthesising Evidence - Similarities <span class="code">[EN1.05]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="skill-area">Language devices</td>
+  <td class="topic">Introduction to language devices</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_6">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_6" data-topic="Introduction to language devices" data-nugget="Similes [EN2.01]">
+          <span class="nugget-text">Similes <span class="code">[EN2.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_7">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_7" data-topic="Introduction to language devices" data-nugget="Metaphors [EN2.02]">
+          <span class="nugget-text">Metaphors <span class="code">[EN2.02]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_8">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_8" data-topic="Introduction to language devices" data-nugget="Personification [EN2.03]">
+          <span class="nugget-text">Personification <span class="code">[EN2.03]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_9">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_9" data-topic="Introduction to language devices" data-nugget="Pathetic Fallacy [EN2.04]">
+          <span class="nugget-text">Pathetic Fallacy <span class="code">[EN2.04]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_10">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_10" data-topic="Introduction to language devices" data-nugget="Emotive Language [EN2.05]">
+          <span class="nugget-text">Emotive Language <span class="code">[EN2.05]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_11">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_11" data-topic="Introduction to language devices" data-nugget="Flattery [EN2.06]">
+          <span class="nugget-text">Flattery <span class="code">[EN2.06]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_12">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_12" data-topic="Introduction to language devices" data-nugget="Facts and Statistics [EN2.07]">
+          <span class="nugget-text">Facts and Statistics <span class="code">[EN2.07]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_13">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_13" data-topic="Introduction to language devices" data-nugget="Hyperbole [EN2.08]">
+          <span class="nugget-text">Hyperbole <span class="code">[EN2.08]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_14">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_14" data-topic="Introduction to language devices" data-nugget="Imperatives [EN2.09]">
+          <span class="nugget-text">Imperatives <span class="code">[EN2.09]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_15">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_15" data-topic="Introduction to language devices" data-nugget="Onomatopoeia [EN2.10]">
+          <span class="nugget-text">Onomatopoeia <span class="code">[EN2.10]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_16">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_16" data-topic="Introduction to language devices" data-nugget="Direct Address [EN2.11]">
+          <span class="nugget-text">Direct Address <span class="code">[EN2.11]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_17">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_17" data-topic="Introduction to language devices" data-nugget="Rule of Three [EN2.12]">
+          <span class="nugget-text">Rule of Three <span class="code">[EN2.12]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_18">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_18" data-topic="Introduction to language devices" data-nugget="Repetition [EN2.13]">
+          <span class="nugget-text">Repetition <span class="code">[EN2.13]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_19">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_19" data-topic="Introduction to language devices" data-nugget="Rhetorical Questions [EN2.14]">
+          <span class="nugget-text">Rhetorical Questions <span class="code">[EN2.14]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_20">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_20" data-topic="Introduction to language devices" data-nugget="Sensory Language [EN2.15]">
+          <span class="nugget-text">Sensory Language <span class="code">[EN2.15]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_21">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_21" data-topic="Introduction to language devices" data-nugget="Symbolism [EN2.16]">
+          <span class="nugget-text">Symbolism <span class="code">[EN2.16]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_22">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_22" data-topic="Introduction to language devices" data-nugget="Contrasting [EN2.17]">
+          <span class="nugget-text">Contrasting <span class="code">[EN2.17]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_23">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_23" data-topic="Introduction to language devices" data-nugget="Alliteration [EN2.18]">
+          <span class="nugget-text">Alliteration <span class="code">[EN2.18]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_24">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_24" data-topic="Introduction to language devices" data-nugget="Irony/Sarcasm/Satire [EN2.19]">
+          <span class="nugget-text">Irony/Sarcasm/Satire <span class="code">[EN2.19]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_25">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_25" data-topic="Introduction to language devices" data-nugget="Idioms [EN2.20]">
+          <span class="nugget-text">Idioms <span class="code">[EN2.20]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_26">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_26" data-topic="Introduction to language devices" data-nugget="Listing [EN2.21]">
+          <span class="nugget-text">Listing <span class="code">[EN2.21]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_27">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_27" data-topic="Introduction to language devices" data-nugget="Anecdotes [EN2.22]">
+          <span class="nugget-text">Anecdotes <span class="code">[EN2.22]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_28">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_28" data-topic="Introduction to language devices" data-nugget="Cliches [EN2.23]">
+          <span class="nugget-text">Cliches <span class="code">[EN2.23]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_29">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_29" data-topic="Introduction to language devices" data-nugget="Tension and Suspense [EN2.24]">
+          <span class="nugget-text">Tension and Suspense <span class="code">[EN2.24]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_30">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_30" data-topic="Introduction to language devices" data-nugget="Atmosphere, Mood and Tone [EN2.25]">
+          <span class="nugget-text">Atmosphere, Mood and Tone <span class="code">[EN2.25]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="skill-area">Language devices</td>
+  <td class="topic">Writing - language devices</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_31">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_31" data-topic="Writing - language devices" data-nugget="Writing: Similes [EN3.01]">
+          <span class="nugget-text">Writing: Similes <span class="code">[EN3.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_32">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_32" data-topic="Writing - language devices" data-nugget="Writing: Metaphors [EN3.02]">
+          <span class="nugget-text">Writing: Metaphors <span class="code">[EN3.02]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_33">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_33" data-topic="Writing - language devices" data-nugget="Writing: Personification [EN3.03]">
+          <span class="nugget-text">Writing: Personification <span class="code">[EN3.03]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_34">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_34" data-topic="Writing - language devices" data-nugget="Writing: Pathetic Fallacy [EN3.04]">
+          <span class="nugget-text">Writing: Pathetic Fallacy <span class="code">[EN3.04]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_35">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_35" data-topic="Writing - language devices" data-nugget="Writing: Emotive Language [EN3.05]">
+          <span class="nugget-text">Writing: Emotive Language <span class="code">[EN3.05]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_36">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_36" data-topic="Writing - language devices" data-nugget="Writing: Flattery [EN3.06]">
+          <span class="nugget-text">Writing: Flattery <span class="code">[EN3.06]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_37">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_37" data-topic="Writing - language devices" data-nugget="Writing: Facts and Statistics [EN3.07]">
+          <span class="nugget-text">Writing: Facts and Statistics <span class="code">[EN3.07]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_38">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_38" data-topic="Writing - language devices" data-nugget="Writing: Hyperbole [EN3.08]">
+          <span class="nugget-text">Writing: Hyperbole <span class="code">[EN3.08]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_39">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_39" data-topic="Writing - language devices" data-nugget="Writing: Imperatives [EN3.09]">
+          <span class="nugget-text">Writing: Imperatives <span class="code">[EN3.09]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_40">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_40" data-topic="Writing - language devices" data-nugget="Writing: Onomatopoeia [EN3.10]">
+          <span class="nugget-text">Writing: Onomatopoeia <span class="code">[EN3.10]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_41">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_41" data-topic="Writing - language devices" data-nugget="Writing: Direct Address [EN3.11]">
+          <span class="nugget-text">Writing: Direct Address <span class="code">[EN3.11]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_42">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_42" data-topic="Writing - language devices" data-nugget="Writing: Rule of Three [EN3.12]">
+          <span class="nugget-text">Writing: Rule of Three <span class="code">[EN3.12]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_43">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_43" data-topic="Writing - language devices" data-nugget="Writing: Repetition [EN3.13]">
+          <span class="nugget-text">Writing: Repetition <span class="code">[EN3.13]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_44">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_44" data-topic="Writing - language devices" data-nugget="Writing: Rhetorical Questions [EN3.14]">
+          <span class="nugget-text">Writing: Rhetorical Questions <span class="code">[EN3.14]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_45">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_45" data-topic="Writing - language devices" data-nugget="Writing: Sensory Language [EN3.15]">
+          <span class="nugget-text">Writing: Sensory Language <span class="code">[EN3.15]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_46">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_46" data-topic="Writing - language devices" data-nugget="Writing: Symbolism [EN3.16]">
+          <span class="nugget-text">Writing: Symbolism <span class="code">[EN3.16]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_47">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_47" data-topic="Writing - language devices" data-nugget="Writing: Irony/Sarcasm/Satire [EN3.17]">
+          <span class="nugget-text">Writing: Irony/Sarcasm/Satire <span class="code">[EN3.17]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_48">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_48" data-topic="Writing - language devices" data-nugget="Writing: Idioms [EN3.18]">
+          <span class="nugget-text">Writing: Idioms <span class="code">[EN3.18]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_49">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_49" data-topic="Writing - language devices" data-nugget="Writing: Contrasting [EN3.19]">
+          <span class="nugget-text">Writing: Contrasting <span class="code">[EN3.19]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_50">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_50" data-topic="Writing - language devices" data-nugget="Writing: Alliteration [EN3.20]">
+          <span class="nugget-text">Writing: Alliteration <span class="code">[EN3.20]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_51">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_51" data-topic="Writing - language devices" data-nugget="Writing: Listing [EN3.21]">
+          <span class="nugget-text">Writing: Listing <span class="code">[EN3.21]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_52">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_52" data-topic="Writing - language devices" data-nugget="Writing: Anecdotes [EN3.22]">
+          <span class="nugget-text">Writing: Anecdotes <span class="code">[EN3.22]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_53">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_53" data-topic="Writing - language devices" data-nugget="Writing: Vocabulary [EN3.23]">
+          <span class="nugget-text">Writing: Vocabulary <span class="code">[EN3.23]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_54">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_54" data-topic="Writing - language devices" data-nugget="Counter Arguments [EN3.24]">
+          <span class="nugget-text">Counter Arguments <span class="code">[EN3.24]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="skill-area">Language devices</td>
+  <td class="topic">Reading - language devices</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_55">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_55" data-topic="Reading - language devices" data-nugget="Reading: Similes [EN4.01]">
+          <span class="nugget-text">Reading: Similes <span class="code">[EN4.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_56">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_56" data-topic="Reading - language devices" data-nugget="Reading: Metaphors [EN4.02]">
+          <span class="nugget-text">Reading: Metaphors <span class="code">[EN4.02]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_57">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_57" data-topic="Reading - language devices" data-nugget="Reading: Personification [EN4.03]">
+          <span class="nugget-text">Reading: Personification <span class="code">[EN4.03]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_58">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_58" data-topic="Reading - language devices" data-nugget="Reading: Pathetic Fallacy [EN4.04]">
+          <span class="nugget-text">Reading: Pathetic Fallacy <span class="code">[EN4.04]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_59">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_59" data-topic="Reading - language devices" data-nugget="Reading: Emotive Language [EN4.05]">
+          <span class="nugget-text">Reading: Emotive Language <span class="code">[EN4.05]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_60">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_60" data-topic="Reading - language devices" data-nugget="Reading: Flattery [EN4.06]">
+          <span class="nugget-text">Reading: Flattery <span class="code">[EN4.06]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_61">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_61" data-topic="Reading - language devices" data-nugget="Reading: Facts and Statistics [EN4.07]">
+          <span class="nugget-text">Reading: Facts and Statistics <span class="code">[EN4.07]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_62">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_62" data-topic="Reading - language devices" data-nugget="Reading: Hyperbole [EN4.08]">
+          <span class="nugget-text">Reading: Hyperbole <span class="code">[EN4.08]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_63">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_63" data-topic="Reading - language devices" data-nugget="Reading: Imperatives [EN4.09]">
+          <span class="nugget-text">Reading: Imperatives <span class="code">[EN4.09]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_64">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_64" data-topic="Reading - language devices" data-nugget="Reading: Onomatopoeia [EN4.10]">
+          <span class="nugget-text">Reading: Onomatopoeia <span class="code">[EN4.10]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_65">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_65" data-topic="Reading - language devices" data-nugget="Reading: Direct Address [EN4.11]">
+          <span class="nugget-text">Reading: Direct Address <span class="code">[EN4.11]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_66">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_66" data-topic="Reading - language devices" data-nugget="Reading: Rule of Three [EN4.12]">
+          <span class="nugget-text">Reading: Rule of Three <span class="code">[EN4.12]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_67">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_67" data-topic="Reading - language devices" data-nugget="Reading: Repetition [EN4.13]">
+          <span class="nugget-text">Reading: Repetition <span class="code">[EN4.13]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_68">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_68" data-topic="Reading - language devices" data-nugget="Reading: Rhetorical Questions [EN4.14]">
+          <span class="nugget-text">Reading: Rhetorical Questions <span class="code">[EN4.14]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_69">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_69" data-topic="Reading - language devices" data-nugget="Reading: Sensory Language [EN4.15]">
+          <span class="nugget-text">Reading: Sensory Language <span class="code">[EN4.15]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_70">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_70" data-topic="Reading - language devices" data-nugget="Reading: Symbolism [EN4.16]">
+          <span class="nugget-text">Reading: Symbolism <span class="code">[EN4.16]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_71">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_71" data-topic="Reading - language devices" data-nugget="Reading: Irony/Sarcasm/Satire [EN4.17]">
+          <span class="nugget-text">Reading: Irony/Sarcasm/Satire <span class="code">[EN4.17]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_72">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_72" data-topic="Reading - language devices" data-nugget="Reading: Idioms [EN4.18]">
+          <span class="nugget-text">Reading: Idioms <span class="code">[EN4.18]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_73">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_73" data-topic="Reading - language devices" data-nugget="Reading: Contrasting [EN4.19]">
+          <span class="nugget-text">Reading: Contrasting <span class="code">[EN4.19]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_74">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_74" data-topic="Reading - language devices" data-nugget="Reading: Alliteration [EN4.20]">
+          <span class="nugget-text">Reading: Alliteration <span class="code">[EN4.20]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_75">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_75" data-topic="Reading - language devices" data-nugget="Reading: Listing [EN4.21]">
+          <span class="nugget-text">Reading: Listing <span class="code">[EN4.21]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_76">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_76" data-topic="Reading - language devices" data-nugget="Reading: Anecdotes [EN4.22]">
+          <span class="nugget-text">Reading: Anecdotes <span class="code">[EN4.22]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="skill-area">Structure</td>
+  <td class="topic">Structure</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_77">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_77" data-topic="Structure" data-nugget="Connectives [EN5.01]">
+          <span class="nugget-text">Connectives <span class="code">[EN5.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_78">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_78" data-topic="Structure" data-nugget="Narrative Structure [EN5.02]">
+          <span class="nugget-text">Narrative Structure <span class="code">[EN5.02]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_79">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_79" data-topic="Structure" data-nugget="Circular Structure [EN5.03]">
+          <span class="nugget-text">Circular Structure <span class="code">[EN5.03]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_80">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_80" data-topic="Structure" data-nugget="Flashback and Flash Forward [EN5.04]">
+          <span class="nugget-text">Flashback and Flash Forward <span class="code">[EN5.04]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_81">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_81" data-topic="Structure" data-nugget="Foreshadowing [EN5.05]">
+          <span class="nugget-text">Foreshadowing <span class="code">[EN5.05]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_82">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_82" data-topic="Structure" data-nugget="Plot Twists [EN5.06]">
+          <span class="nugget-text">Plot Twists <span class="code">[EN5.06]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="skill-area">Reading</td>
+  <td class="topic">Reading AO2 and AO3 skills</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_83">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_83" data-topic="Reading AO2 and AO3 skills" data-nugget="AO2 [EN6.01]">
+          <span class="nugget-text">AO2 <span class="code">[EN6.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_84">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_84" data-topic="Reading AO2 and AO3 skills" data-nugget="What is Structure? [EN6.02]">
+          <span class="nugget-text">What is Structure? <span class="code">[EN6.02]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_85">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_85" data-topic="Reading AO2 and AO3 skills" data-nugget="Connotations [EN6.03]">
+          <span class="nugget-text">Connotations <span class="code">[EN6.03]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_86">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_86" data-topic="Reading AO2 and AO3 skills" data-nugget="AO3 [EN6.04]">
+          <span class="nugget-text">AO3 <span class="code">[EN6.04]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="skill-area">Evaluate</td>
+  <td class="topic">Evaluation and analytical writing</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_87">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_87" data-topic="Evaluation and analytical writing" data-nugget="Evaluative Language [EN7.01]">
+          <span class="nugget-text">Evaluative Language <span class="code">[EN7.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_88">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_88" data-topic="Evaluation and analytical writing" data-nugget="Writing an Analytical Paragraph [EN7.02]">
+          <span class="nugget-text">Writing an Analytical Paragraph <span class="code">[EN7.02]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_89">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_89" data-topic="Evaluation and analytical writing" data-nugget="Embedding Quotations [EN7.03]">
+          <span class="nugget-text">Embedding Quotations <span class="code">[EN7.03]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_90">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_90" data-topic="Evaluation and analytical writing" data-nugget="AO4 [EN7.04]">
+          <span class="nugget-text">AO4 <span class="code">[EN7.04]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="skill-area">Writing</td>
+  <td class="topic">Writing skills</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_91">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_91" data-topic="Writing skills" data-nugget="Purpose, Audience and Form [EN8.01]">
+          <span class="nugget-text">Purpose, Audience and Form <span class="code">[EN8.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_92">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_92" data-topic="Writing skills" data-nugget="Planning [EN8.02]">
+          <span class="nugget-text">Planning <span class="code">[EN8.02]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_93">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_93" data-topic="Writing skills" data-nugget="Proofreading [EN8.03]">
+          <span class="nugget-text">Proofreading <span class="code">[EN8.03]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_94">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_94" data-topic="Writing skills" data-nugget="Sentence Variety [EN8.04]">
+          <span class="nugget-text">Sentence Variety <span class="code">[EN8.04]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="skill-area">Form and text types</td>
+  <td class="topic">Form and text types</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_95">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_95" data-topic="Form and text types" data-nugget="Letters [EN9.01]">
+          <span class="nugget-text">Letters <span class="code">[EN9.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_96">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_96" data-topic="Form and text types" data-nugget="Articles [EN9.02]">
+          <span class="nugget-text">Articles <span class="code">[EN9.02]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_97">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_97" data-topic="Form and text types" data-nugget="Reviews [EN9.03]">
+          <span class="nugget-text">Reviews <span class="code">[EN9.03]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_98">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_98" data-topic="Form and text types" data-nugget="Speeches [EN9.04]">
+          <span class="nugget-text">Speeches <span class="code">[EN9.04]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_99">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_99" data-topic="Form and text types" data-nugget="Travel Writing [EN9.05]">
+          <span class="nugget-text">Travel Writing <span class="code">[EN9.05]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_100">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_100" data-topic="Form and text types" data-nugget="Blogs [EN9.06]">
+          <span class="nugget-text">Blogs <span class="code">[EN9.06]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_101">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_101" data-topic="Form and text types" data-nugget="Reports [EN9.07]">
+          <span class="nugget-text">Reports <span class="code">[EN9.07]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_102">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_102" data-topic="Form and text types" data-nugget="Fiction Writing [EN9.08]">
+          <span class="nugget-text">Fiction Writing <span class="code">[EN9.08]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_103">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_103" data-topic="Form and text types" data-nugget="Leaflets [EN9.09]">
+          <span class="nugget-text">Leaflets <span class="code">[EN9.09]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_104">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_104" data-topic="Form and text types" data-nugget="Nonfiction Writing [EN9.10]">
+          <span class="nugget-text">Nonfiction Writing <span class="code">[EN9.10]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="skill-area">AQA exam practice</td>
+  <td class="topic">AQA paper questions</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_105">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_105" data-topic="AQA paper questions" data-nugget="AQA: Paper 1, Question 1 [EN10.01]">
+          <span class="nugget-text">AQA: Paper 1, Question 1 <span class="code">[EN10.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_106">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_106" data-topic="AQA paper questions" data-nugget="AQA: Paper 1, Question 2 [EN10.02]">
+          <span class="nugget-text">AQA: Paper 1, Question 2 <span class="code">[EN10.02]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_107">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_107" data-topic="AQA paper questions" data-nugget="AQA: Paper 1, Question 3 [EN10.03]">
+          <span class="nugget-text">AQA: Paper 1, Question 3 <span class="code">[EN10.03]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_108">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_108" data-topic="AQA paper questions" data-nugget="AQA: Paper 1, Question 4 [EN10.04]">
+          <span class="nugget-text">AQA: Paper 1, Question 4 <span class="code">[EN10.04]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_109">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_109" data-topic="AQA paper questions" data-nugget="AQA: Paper 1, Question 5 - Image [EN10.05]">
+          <span class="nugget-text">AQA: Paper 1, Question 5 - Image <span class="code">[EN10.05]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_110">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_110" data-topic="AQA paper questions" data-nugget="AQA: Paper 1, Question 5 - Statement [EN10.06]">
+          <span class="nugget-text">AQA: Paper 1, Question 5 - Statement <span class="code">[EN10.06]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_111">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_111" data-topic="AQA paper questions" data-nugget="AQA: Paper 2, Question 1 [EN10.07]">
+          <span class="nugget-text">AQA: Paper 2, Question 1 <span class="code">[EN10.07]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_112">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_112" data-topic="AQA paper questions" data-nugget="AQA: Paper 2, Question 2 - Similarities [EN10.08]">
+          <span class="nugget-text">AQA: Paper 2, Question 2 - Similarities <span class="code">[EN10.08]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_113">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_113" data-topic="AQA paper questions" data-nugget="AQA: Paper 2, Question 2 - Differences [EN10.09]">
+          <span class="nugget-text">AQA: Paper 2, Question 2 - Differences <span class="code">[EN10.09]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_114">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_114" data-topic="AQA paper questions" data-nugget="AQA: Paper 2, Question 3 [EN10.10]">
+          <span class="nugget-text">AQA: Paper 2, Question 3 <span class="code">[EN10.10]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_115">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_115" data-topic="AQA paper questions" data-nugget="AQA: Paper 2, Question 4 [EN10.11]">
+          <span class="nugget-text">AQA: Paper 2, Question 4 <span class="code">[EN10.11]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_116">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_116" data-topic="AQA paper questions" data-nugget="AQA: Paper 2, Question 5 [EN10.12]">
+          <span class="nugget-text">AQA: Paper 2, Question 5 <span class="code">[EN10.12]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="skill-area">AQA exam practice</td>
+  <td class="topic">AQA practice papers</td>
+  <td class="nuggets">
+    <ul class="nugget-list">
+      <li>
+        <label class="nugget-option" for="nugget_117">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_117" data-topic="AQA practice papers" data-nugget="Practice Paper A: Paper 1 [EN11.01]">
+          <span class="nugget-text">Practice Paper A: Paper 1 <span class="code">[EN11.01]</span></span>
+        </label>
+      </li>
+      <li>
+        <label class="nugget-option" for="nugget_118">
+          <input class="nugget-checkbox" type="checkbox" id="nugget_118" data-topic="AQA practice papers" data-nugget="Practice Paper A: Paper 2 [EN11.02]">
+          <span class="nugget-text">Practice Paper A: Paper 2 <span class="code">[EN11.02]</span></span>
+        </label>
+      </li>
+    </ul>
+  </td>
+</tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="action-panel">
+        <p class="selected-count" id="selectedCount">0 nuggets selected</p>
+        <div class="button-row">
+          <button class="primary-btn" id="generateBtn" type="button">Generate targets</button>
+        </div>
+      </div>
+
+      <div class="output-card" id="targetsSection">
+        <h2>Your generated targets</h2>
+        <p class="output-help">Copy the text below to the clipboard, then log into Teams and send it to your English tutor. After that, complete each target ASAP as homework to help improve your grade.</p>
+        <textarea id="targetOutput" readonly placeholder="Your generated targets will appear here after you click &quot;Generate targets&quot;."></textarea>
+        <div class="button-row" style="margin-top: 14px;">
+          <button class="secondary-btn" id="copyBtn" type="button">Copy to clipboard</button>
+          <span class="status" id="copyStatus" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="footer">Organised from the English Language GCSE (AQA) CENTURY nugget list.</div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const checkboxes = Array.from(document.querySelectorAll('.nugget-checkbox'));
+      const output = document.getElementById('targetOutput');
+      const copyStatus = document.getElementById('copyStatus');
+      const selectedCount = document.getElementById('selectedCount');
+      const targetsSection = document.getElementById('targetsSection');
+
+      function updateSelectedCount() {
+        const count = document.querySelectorAll('.nugget-checkbox:checked').length;
+        selectedCount.textContent = count + ' nugget' + (count === 1 ? '' : 's') + ' selected';
+      }
+
+      function updateRowHighlight() {
+        document.querySelectorAll('tbody tr').forEach((row) => {
+          const hasSelection = row.querySelector('.nugget-checkbox:checked') !== null;
+          row.classList.toggle('has-selection', hasSelection);
+        });
+      }
+
+      function buildTargetsText() {
+        const checked = Array.from(document.querySelectorAll('.nugget-checkbox:checked'));
+        if (!checked.length) {
+          return '';
+        }
+
+        const grouped = [];
+        const topicMap = new Map();
+
+        checked.forEach((checkbox) => {
+          const topic = checkbox.dataset.topic;
+          const nugget = checkbox.dataset.nugget;
+
+          if (!topicMap.has(topic)) {
+            const nuggetList = [];
+            topicMap.set(topic, nuggetList);
+            grouped.push({ topic, nuggets: nuggetList });
+          }
+
+          const nuggetList = topicMap.get(topic);
+          if (!nuggetList.includes(nugget)) {
+            nuggetList.push(nugget);
+          }
+        });
+
+        const lines = [];
+        lines.push('My targets are to improve in the following English topics and complete the corresponding CENTURY nuggets:');
+        lines.push('');
+
+        grouped.forEach((group, index) => {
+          lines.push('Topic: ' + group.topic);
+          lines.push('CENTURY nugget(s):');
+          group.nuggets.forEach((nugget) => {
+            lines.push('- ' + nugget);
+          });
+          if (index !== grouped.length - 1) {
+            lines.push('');
+          }
+        });
+
+        lines.push('');
+        lines.push('I will complete these targets as soon as possible as homework to help improve my grade.');
+        return lines.join('\n');
+      }
+
+      function generateTargets() {
+        const text = buildTargetsText();
+        copyStatus.textContent = '';
+        copyStatus.className = 'status';
+
+        if (!text) {
+          output.value = 'Please tick the CENTURY nuggets that you need to work on, then click "Generate targets".';
+          copyStatus.textContent = 'No nuggets selected yet.';
+          copyStatus.className = 'status warning';
+          output.focus();
+          output.select();
+          return;
+        }
+
+        output.value = text;
+        output.focus();
+        output.setSelectionRange(0, 0);
+
+        if (targetsSection && typeof targetsSection.scrollIntoView === 'function') {
+          targetsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      async function copyTargets() {
+        const text = output.value.trim();
+
+        if (!text || text === 'Please tick the CENTURY nuggets that you need to work on, then click "Generate targets".') {
+          copyStatus.textContent = 'Generate your targets first.';
+          copyStatus.className = 'status warning';
+          return;
+        }
+
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            output.focus();
+            output.select();
+            output.setSelectionRange(0, output.value.length);
+
+            const copied = document.execCommand('copy');
+            if (!copied) {
+              throw new Error('Fallback copy failed');
+            }
+          }
+
+          copyStatus.textContent = 'Copied to clipboard. Now send it to your English tutor on Teams.';
+          copyStatus.className = 'status success';
+        } catch (error) {
+          output.focus();
+          output.select();
+          output.setSelectionRange(0, output.value.length);
+          copyStatus.textContent = 'Press Ctrl+C (or Cmd+C) to copy the text, then send it to your English tutor on Teams.';
+          copyStatus.className = 'status warning';
+        }
+      }
+
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+          updateSelectedCount();
+          updateRowHighlight();
+        });
+      });
+
+      document.getElementById('generateBtn').addEventListener('click', generateTargets);
+      document.getElementById('copyBtn').addEventListener('click', copyTargets);
+
+      updateSelectedCount();
+      updateRowHighlight();
+    })();
+  </script>
+</body>
+</html>
